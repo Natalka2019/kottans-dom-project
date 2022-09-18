@@ -43,7 +43,7 @@ content.innerHTML = overview;
 navBarItemsList.addEventListener("click", ({target}) => {
   let id = target.closest('a')?.id;
 
-  if(!id ) return;
+  if(!id) return;
 
   changeContent(id);
 
@@ -52,7 +52,7 @@ navBarItemsList.addEventListener("click", ({target}) => {
 mobileNavBarItemsList.addEventListener("click", ({target}) => {
   let id = target.id.split('').pop();
 
-  if(!id ) return;
+  if(target.tagName !== "A") return;
 
   changeContent(id);
 
